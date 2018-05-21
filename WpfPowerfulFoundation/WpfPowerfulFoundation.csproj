@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
+    <TargetFramework>net471</TargetFramework>
+	<OutputType>WinExe</OutputType>
+	<ApplicationIcon />
+	<StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net471\WpfPowerfulFoundation.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\net471\WpfPowerfulFoundation.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App.xaml -->
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+      
+    <!-- XAML elements -->
+    <Page Include="**\*.xaml" Exclude="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+	<Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+	
+  </ItemGroup>
+</Project>
