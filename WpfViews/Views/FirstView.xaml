@@ -6,7 +6,9 @@
               xmlns:wpf="clr-namespace:FrHello.NetLib.Core.Wpf;assembly=NetLib.Core.Wpf"
               mc:Ignorable="d"
               d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="出现吧" />
-    </Grid>
+    <StackPanel>
+        <TextBlock Text="{Binding TestModel.TestString, Mode=OneWay}" />
+        <TextBlock Text="{Binding TestModel.TestDbProperty1, Mode=OneWay}" />
+        <TextBlock Text="{Binding TestModel.TestDbProperty2, Mode=OneWay}" />
+    </StackPanel>
 </wpf:BaseView>
