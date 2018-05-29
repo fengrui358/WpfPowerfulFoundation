@@ -1,21 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.5.4">
   <PropertyGroup>
-	<LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
     <TargetFramework>net471</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <!-- XAML elements -->
-    <Page Include="**\*.xaml" Exclude="App.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-	<Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-	
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.0.5" />
   </ItemGroup>
 </Project>

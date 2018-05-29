@@ -11,4 +11,14 @@
     <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="WindowViewModels\" />
+    <Folder Include="ControlViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FrHello.NetLib.Core.Mvx" Version="1.0.1" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.5.6" />
+  </ItemGroup>
+
 </Project>
