@@ -14,7 +14,7 @@
     <DocumentationFile>bin\Release\net471\WpfPowerfulFoundation.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.0.5" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.0.6" />
     <PackageReference Include="NLog.Config" Version="4.5.5" />
   </ItemGroup>
   <ItemGroup>
