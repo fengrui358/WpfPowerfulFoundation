@@ -11,6 +11,8 @@ namespace Models
 
         public override string TestDbProperty2 { get; set; } = "Db2";
 
+        public int Input1 { get; set; }
+
         public TestModel()
         {
             Task.Run(() =>

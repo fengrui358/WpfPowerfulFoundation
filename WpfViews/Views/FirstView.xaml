@@ -10,5 +10,7 @@
         <TextBlock Text="{Binding TestModel.TestString, Mode=OneWay}" />
         <TextBlock Text="{Binding TestModel.TestDbProperty1, Mode=OneWay}" />
         <TextBlock Text="{Binding TestModel.TestDbProperty2, Mode=OneWay}" />
+        <TextBox Text="{Binding TestModel.Input1, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Ok" Command="{Binding GetInput1Command}"/>
     </StackPanel>
 </wpf:BaseView>
