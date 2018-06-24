@@ -6,6 +6,7 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.0.6" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.0.9" />
+    <PackageReference Include="MahApps.Metro" Version="1.6.5" />
   </ItemGroup>
 </Project>
