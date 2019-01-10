@@ -23,7 +23,7 @@
                             </Grid.RowDefinitions>
                             <mah:ProgressRing Grid.Row="0" Foreground="{TemplateBinding Background}"
                                               IsActive="{TemplateBinding IsLoading}" />
-                            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{TemplateBinding Progress}"
+                            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Progress, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay, StringFormat={}{0:P2}}"
                                        Visibility="{TemplateBinding Progress, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}" Margin="3"/>
                             <TextBlock Grid.Row="2" HorizontalAlignment="Center" Text="{TemplateBinding Message}" FontWeight="Bold"
                                        Visibility="{TemplateBinding Message, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}" Margin="3"/>
