@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:controls="clr-namespace:WpfViews.Controls"
+                    xmlns:uiConverters="clr-namespace:FrHello.NetLib.Core.Wpf.UiConverters;assembly=NetLib.Core.Wpf">
+    <Style TargetType="{x:Type controls:LoadingControl}">
+        <Setter Property="Background" Value="{DynamicResource AccentColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:LoadingControl}">
+                    <Grid Visibility="{TemplateBinding IsLoading, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}">
+                        <Border Background="White" Opacity="0.8"
+                                Visibility="{TemplateBinding IsLoading, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}">
+                            <Border.Effect>
+                                <BlurEffect Radius="5" RenderingBias="Performance" />
+                            </Border.Effect>
+                        </Border>
+                        <Grid VerticalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <mah:ProgressRing Grid.Row="0" Foreground="{TemplateBinding Background}"
+                                              IsActive="{TemplateBinding IsLoading}" />
+                            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{TemplateBinding Progress}"
+                                       Visibility="{TemplateBinding Progress, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}" Margin="3"/>
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Center" Text="{TemplateBinding Message}" FontWeight="Bold"
+                                       Visibility="{TemplateBinding Message, Converter={x:Static uiConverters:SuperConverterProvider.SuperConverter}}" Margin="3"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
