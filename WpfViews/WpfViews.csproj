@@ -7,7 +7,7 @@
     <Folder Include="Themes\LoadingControl\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.12" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.16" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@
     <DocumentationFile>bin\Release\net471\WpfPowerfulFoundation.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.12" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.16" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
     <PackageReference Include="NLog.Config" Version="4.5.11" />
   </ItemGroup>
