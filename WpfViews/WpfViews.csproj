@@ -1,13 +1,14 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/1.5.4">
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.68">
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
+    <ExtrasEnableWpfProjectSetup>true</ExtrasEnableWpfProjectSetup>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="Themes\LoadingControl\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.16" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.17" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
   </ItemGroup>
   <ItemGroup>
@@ -15,5 +16,11 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\DataBase\DataBase.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
 </Project>
