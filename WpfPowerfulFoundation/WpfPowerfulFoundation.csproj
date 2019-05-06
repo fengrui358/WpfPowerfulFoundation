@@ -1,6 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.68">
   <PropertyGroup>
-    <TargetFramework>net471</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <ExtrasEnableWpfProjectSetup>true</ExtrasEnableWpfProjectSetup>
 	<ApplicationIcon />
     <OutputType>WinExe</OutputType>
@@ -15,9 +15,9 @@
     <DocumentationFile>bin\Release\net471\WpfPowerfulFoundation.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.17" />
+    <PackageReference Include="FrHello.NetLib.Core.Wpf" Version="1.1.22" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
-    <PackageReference Include="NLog.Config" Version="4.6.2" />
+    <PackageReference Include="NLog.Config" Version="4.6.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
