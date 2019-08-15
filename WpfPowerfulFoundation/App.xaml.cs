@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Windows;
 using Core.ViewModels;
 using FrHello.NetLib.Core.Wpf;
+using MvvmCross.Base;
 using WpfViews.Windows;
 
 namespace WpfPowerfulFoundation
