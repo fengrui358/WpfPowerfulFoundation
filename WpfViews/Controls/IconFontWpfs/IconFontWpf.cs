@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using IconFontWpf;
+using FrHello.NetLib.Core.Wpf.Controls.IconFontWpf;
 
 namespace WpfViews.Controls.IconFontWpfs
 {
